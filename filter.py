@@ -1,13 +1,13 @@
 import pandas as pd
-import glob
+import glob2
 from tqdm import tqdm
-import argparse
+import argparse, os, sys
 
 def get_zip(phone):
     
     phone = str(phone)[0 : 6]
     
-    ziplist = pd.read_csv('/home/antide/angi/bots/filters/area_to_zip.csv')
+    ziplist = pd.read_csv(os.path.join(sys.path[0],'area_to_zip.csv'))
     
     # print('Zip Lookup...')
     found_zip = '#N/A'
@@ -22,7 +22,7 @@ def get_zip(phone):
 
 def get_pwc(title):
     
-    pwc_filter = pd.read_csv('/home/antide/angi/bots/filters/pwc_filter.csv')
+    pwc_filter = pd.read_csv(os.path.join(sys.path[0],'pwc_filter.csv'))
     
     found_pwc = '0'
     # print('Filtering Pwc ...')
@@ -41,7 +41,7 @@ def get_info(path_to_directory,output_path):
 
     path = path_to_directory + '/*.csv'
 
-    files = glob.glob(path)
+    files = glob2.glob(path)
     
     for file in files:
         df = pd.read_csv(file)
@@ -62,12 +62,12 @@ def get_info(path_to_directory,output_path):
     
     count = 0
     
-    for row in tqdm(cdf.itertuples(index=False)):
+    for row in cdf.itertuples(index=False):
         # print(row)
         count+=1
         filtered = 0
         good = 0
-        # print(count,'/',len(cdf))
+        print(count,'/',len(cdf))
                 
         name = row[0]
         phone = row[1]

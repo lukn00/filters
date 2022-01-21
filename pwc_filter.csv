@@ -1,0 +1,545 @@
+Term,PWC
+Acoustic,1
+Ceiling,1
+Appliance,3
+ApplianceSrv,3
+Apprais,4
+Tree care,79
+Tree service,79
+Tree trim,79
+Architect,5
+Engineer,5
+Interior Design,5
+Home Design,5
+Home Staging,5
+House Staging,5
+Drafting,5
+Audio Video,6
+Audio/Visual,6
+Audio Visual,6
+A/V,6
+Computer,6
+TV Installation,6
+TV,6
+Home Theater,6
+wall mount,6
+wallmount,6
+PC Repair,6
+Awning,7
+Cabinet,8
+refinish,8
+Countertop,8
+Counter Tops,8
+Counters,8
+Counter,8
+Granite,8
+Millwork,8
+Wood Fabrication,8
+Vanitie,8
+Closet,8
+Marble,8
+HomeWorks,8
+Home Works,8
+Home Work,8
+Surface,8
+Carpenter,9
+Carpentry,9
+Finisher,9
+Finishing,9
+Finishes,9
+Framing,9
+Refinishing,9
+Trim,9
+Crown Molding,9
+Woodworking,9
+Woodwork,9
+Wood Work,9
+Interiors,9
+Interior,9
+Stair,9
+Carpet clean,13
+Carpet,11
+Central Vacuum,12
+Organize,14
+Organizing,14
+Clutter,14
+Concrete,16
+Cement,16
+Mason,16
+Foundation,16
+Foudations,16
+Brick,16
+Driveway,16
+Epoxy Coating,16
+Flatworks,16
+Resurfacing,16
+Mudjack,16
+Tuckpointing,16
+Deck,17
+Decks,17
+Decking,17
+Decksource,17
+Porch,17
+Sunroom,17
+Patio,17
+Patios,17
+Demolition,18
+Wrecker,18
+Disability,20
+Disabled,20
+Accessibility,20
+Dock,21
+Window,22
+Shutter,22
+Screen Repair,22
+Screens,22
+Glass,22
+Draperies,24
+Blinds,24
+Shades,24
+Drape,24
+Drapes,24
+Curtain,24
+Curtains,24
+Home Furnishing,24
+Electr,25
+ Elect,25
+Volt,25
+Lighting,25
+Sparky,25
+Voltage,25
+Power,25
+Wiring,25
+Elevator,28
+Lift,28
+Excavat,29
+Erosion,29
+Grading,29
+Grade,29
+Backhoe,29
+Dirt,29
+Escav,29
+Drainage,29
+Fence,30
+Fencing,30
+Fenc-,30
+Chain Link,30
+Fireplace,31
+Wood Stove,31
+Chimney,31
+chimny,31
+Floor,32
+Hardwood,32
+flooring,32
+Fountain,33
+Pond,33
+Furniture Repair,35
+Furniture Refinish,35
+Upholstery,35
+Garage,36
+Portable Building,36
+Overhead Door,36
+shed,36
+sheds,36
+Gate,30
+Enclosures,37
+Outbuildings,37
+Shed,37
+Sheds,37
+Storm Shelter,37
+Specialty Structure,37
+carport,37
+steel building,37
+Glass Instalation,38
+Glass Instalations,38
+Mirror,38
+Mirrors,38
+Skylight,38
+Plumb,60
+plmb,60
+Gas Piping,60
+Shower,60
+Drain,60
+Drains,60
+Sewer,60
+Rooter,60
+Water Heater,60
+HVAC,39
+HVACR,39
+Thermal,39
+Air Condition,39
+Airconditioning,39
+Hot Water,39
+Gas Fitter,39
+Refrigeration,39
+Boiler,39
+Airtech,39
+Comfort,39
+Comforts,39
+Duct,39
+Ducts,39
+Heating,39
+Heat,39
+Heater,39
+ Air,39
+Heaters,39
+Ventilation,39
+Cooling,39
+Cool,39
+Oil Burner,39
+Heaton,39
+A-C,39
+ AC ,39
+A\C,39
+A/C,39
+A.C,39
+Furnace,39
+htg,39
+Furnaces,39
+Mechanical,39
+Climate,39
+Kooling,39
+-air,39
+leak detection,39
+sheet metal,39
+sheetmetal,39
+metal fabricat,39
+temperature,39
+& Hammer,40
+and hammer,40
+& a hammer,40
+and a hammer,40
+A Hammer,40
+All Trades,40
+Fix It,40
+Fixit,40
+Fix-it,40
+Fix- It,40
+Fixins,40
+Fixes It,40
+Fix All,40
+Fix Em,40
+It Fixed,40
+That Fixed,40
+Fix Up,40
+Fixer Guy,40
+FixItUp,40
+Fix Thing,40
+Handy,40
+HomeFix,40
+installation,40
+Handi,40
+Helping Hand,40
+Home Maintenance,40
+Home Improvement,40
+Homes Improvement,40
+Homeimprovement,40
+Home Repair,40
+House Help,40
+Home Services,40
+homeservice,40
+Can Do It,40
+Do It All,40
+Will Do It,40
+Odd Job,40
+Small Job,40
+General Repairs,40
+Residential Service,40
+Maintenance Man,40
+Maintenance Men,40
+Maintenance & Repair,40
+Maintenance and Repair,40
+of trades,40
+hammerz,40
+Building SVC,40
+property pros,40
+does it,40
+HANYMAN,40
+repairs and improvement,40
+MNTNC,40
+property improvement,40
+honey do,40
+Home Building,41
+Built Homes,41
+Builder,41
+Custom Homes,41
+Inspect,42
+Home Structure Moving,43
+House Moving,43
+Hot Tubs,45
+Spas,45
+Saunas,45
+Insulation,46
+Spray Foam,46
+foam,46
+Landscape,47
+Landscaping,47
+Landascape,47
+Landscp,47
+Ldscpg,47
+Lanscape,47
+Lawnscape,47
+Garden Service,47
+Scapes,47
+backflow,47
+back flow,47
+Scaping,47
+Land Compan,47
+Sod,47
+Sods,47
+Leaf,47
+Gardenscapes,47
+Hardscape,47
+Hard scape,47
+Retaining Walls,47
+Sprinkler,47
+Irrigation,47
+Snow Removal,47
+SnowRemoval,47
+Snowplowing,47
+Snow Plowing,47
+Stonework,47
+Stone Work,47
+Weed Control,47
+curbing,47
+curb,47
+Land Service,47
+Grounds Service,47
+Garden,47
+Nursery,47
+Lawn,48
+Turfgrass,48
+Ground Maintenance,48
+Hydroseeding,48
+gardening,48
+Grass,48
+Grass Cut,48
+Cut Grass,48
+BackYard,48
+Turf,48
+Dirt Cheap,48
+Grass Guys,48
+Grass Guy,48
+Arborist,79
+Arborists,79
+Groundskeeping,48
+Grounds keeping,48
+Ground keeping,48
+Groundkeeping,48
+Groundkeeper,48
+Ground Keeper,48
+Pruning,48
+Mowing,48
+Yard,48
+Yardcare,48
+Tree Service,79
+Tree,79
+Treecare,79
+TreeExpert,79
+Shrub,79
+Stump,79
+Trimming,48
+Trimlawn,48
+Fertilizer,48
+Vegetation,48
+Firewood,48
+Landcare,48
+Land Care,48
+Yardz,48
+greenthumb,48
+GARDNNG,48
+Locksmith,49
+Lock,49
+Key & Locks,49
+Lock Smith,49
+Moving,52
+Mover,52
+Coating,55
+Coats,55
+Coated,55
+Paint,55
+Power Wash,55
+Pressure Wash,55
+Pressurewash,55
+Powerwash,55
+Wall Covering,55
+wallcovering,55
+Wallpaper,55
+Faux,55
+House Wash,55
+Fine Lines,55
+Paperhanging,55
+Caulk,55
+Paving,56
+Paver,56
+Pavement,56
+Seal Coating,56
+Sealcoat,56
+Sealcoating,56
+Seal-Coating,56
+Striping,56
+Asphalt,56
+Blacktop,56
+Black Top,56
+Flatwork,56
+Epoxy,56
+Sealer,56
+Animal,58
+Critter,58
+Wild Life,58
+Wildlife,58
+Termite,58
+Bedbug,58
+Bed Bug,58
+Mosquito,58
+Bug,58
+Bugs,58
+Pest,58
+Pesky,58
+Rodent,58
+Exterminating,58
+Exterminator,58
+fumigate,58
+fumigation,58
+exterm,58
+Plaster,59
+Drywall,59
+Dry Wall,59
+Sheetrock,59
+-Wall,59
+Walls,59
+Pool,61
+Swim,61
+Swimming,61
+Recovery Service,63
+Fire Damage,63
+Water Damage,63
+Damage Clean,63
+Roof,65
+Gutter,65
+Seamless,65
+LeafGuard,65
+Aluminium,65
+Security,67
+Alarm System,67
+Alarm Services,67
+Septic,68
+Spetic,68
+Siding,69
+Stucco,69
+Exteriors,69
+Exterior,69
+Xterior,69
+Welder,84
+Fabrication,84
+Welding,84
+Ironworks,84
+Iron work,84
+Metal Wo,84
+Tile,74
+Stone,74
+Ceramic,74
+Grout,74
+Asbestos,78
+Testing,78
+Abatement,78
+Abate,78
+* air *,78
+Mold,78
+Remediation,78
+Radon,78
+Environmental,78
+lead,78
+Solar,102
+Removal,81
+Junk,81
+Trash,81
+Waste,81
+Disposal,81
+Dump,81
+Water Treatment,82
+Wells,82
+Well & Pump,82
+Water Purificaiton,82
+Pumping,82
+Pump Service,82
+Pump Srv,82
+Water Condition,82
+Water proof,83
+Waterproof,83
+Dry Basement,83
+Basement Systems,83
+Outdoor,47
+Door,22
+Doors,22
+Janitorial,13
+JANITOR,13
+Maid,13
+Klean,13
+Housekeeping,13
+House Keeping,13
+Steam,13
+Swept,13
+white glove,13
+Carpet,13
+Building Services,13
+Kleen,13
+Dust,13
+BROOM,13
+Shade,11
+Additions,2
+Contractor,2
+Contrac,2
+General-Contr,2
+General C,2
+Const.,2
+Const,2
+Home Solutions,2
+kitchenandbath,2
+Kitchen & Bath,2
+Kitchen and Bath,2
+Bathrooms & Kitchens,2
+Bathroom & Kitchen,2
+Bathroom,2
+Remod,2
+Renovation,2
+Renovating,2
+Renovator,2
+Restoration,2
+Residential Repair,2
+kitchen specialist,2
+Home Repair,2
+Building Repair,2
+Home Service,2
+Home Care & Repair,2
+Home Pro,2
+HomePro,2
+Property Care,2
+Property Service,2
+Property Solution,2
+Improvement Company,2
+Building and Repair,2
+Building & Repair,2
+Building Solutions,2
+contruction,2
+bath & kitchen,2
+Rnvtns,2
+CONCTRUCTION,2
+CUSTOM BUILDING,2
+Home Improvment,2
+Konstruction,2
+Kontractors,2
+Contruccion,2
+HM IMPRVMNTS,2
+BATH SOLUTION,2
+RSDNTL,2
+Custom Build,2
+Modular Building,2
+Home Rebuild,2
+Home redesign,2
+Basement,2
+Design Build,2
+Contr,2
+Clean,13
+Maintenance,40
+Maint,40

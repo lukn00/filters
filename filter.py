@@ -83,7 +83,7 @@ def get_info(path_to_directory,output_path):
             city = ''
         try:
             link = row[3]
-            except:
+        except:
             link = ''
         zipcode = get_zip(phone)
         if zipcode == '#N/A':

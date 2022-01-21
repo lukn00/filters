@@ -61,17 +61,22 @@ def get_info(path_to_directory,output_path):
     pwclist = []
     
     count = 0
-    
+    filtered = 0
+    good = 0    
     for row in cdf.itertuples(index=False):
         # print(row)
         count+=1
-        filtered = 0
-        good = 0
+
         print(count,'/',len(cdf))
                 
         name = row[0]
         phone = row[1]
-        # print(len(str(phone)))
+        phone = str(phone).strip()
+        phone = phone.replace('(','')
+        phone = phone.replace(')','')
+        phone = phone.replace('-','')
+        phone = phone.replace(' ','')
+        print(phone)
         if len(str(phone)) == 10:
             pass
         else:

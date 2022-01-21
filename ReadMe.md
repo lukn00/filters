@@ -87,3 +87,6 @@ restart your terminal and you should now be able to type 'filter' and pass the n
 filter -i directory/to/filter/ -o directory/to/output
 ```
 
+### EXTRA
+
+If excel keeps getting rid of your leading zeros in the zip column, check this out https://support.microsoft.com/en-us/office/keeping-leading-zeros-and-large-numbers-1bf7b935-36e1-4985-842f-5dfa51f85fe7

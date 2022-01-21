@@ -62,12 +62,12 @@ def get_info(path_to_directory,output_path):
     
     count = 0
     
-    for row in cdf.itertuples(index=False):
+    for row in tqdm(cdf.itertuples(index=False)):
         # print(row)
         count+=1
         filtered = 0
         good = 0
-        print(count,'/',len(cdf))
+        # print(count,'/',len(cdf))
                 
         name = row[0]
         phone = row[1]

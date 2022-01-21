@@ -7,14 +7,14 @@ def get_zip(phone):
     
     phone = str(phone)[0 : 6]
     
-    ziplist = pd.read_csv('area_to_zip.csv')
+    ziplist = pd.read_csv('/home/antide/angi/bots/filters/area_to_zip.csv')
     
     # print('Zip Lookup...')
     found_zip = '#N/A'
-    for i , row in ziplist.iterrows():
-        area_code = row['Area Code']
-        zip_code = row['Zip Code']
-        
+    for row in ziplist.itertuples(index=False):
+        area_code = row[0]
+        zip_code = row[1]
+        # print(area_code, zip_code)
         if phone in str(area_code):
             found_zip = zip_code
             break
@@ -22,13 +22,13 @@ def get_zip(phone):
 
 def get_pwc(title):
     
-    pwc_filter = pd.read_csv('pwc_filter.csv')
+    pwc_filter = pd.read_csv('/home/antide/angi/bots/filters/pwc_filter.csv')
     
     found_pwc = '0'
     # print('Filtering Pwc ...')
-    for i, row in pwc_filter.iterrows():
-        term = row['Term']
-        pwc = row['PWC']
+    for row in pwc_filter.itertuples(index=False):
+        term = row[0]
+        pwc = row[1]
         if term in title:
             found_pwc = pwc
             break
@@ -49,6 +49,7 @@ def get_info(path_to_directory,output_path):
 
     cdf = pd.concat(dflist)
     cdf = cdf.drop_duplicates()
+    cdf = cdf.drop_duplicates(subset=['phone'])
     
     print('getting infos :P')
     
@@ -61,23 +62,33 @@ def get_info(path_to_directory,output_path):
     
     count = 0
     
-    for i, row in cdf.iterrows():
+    for row in cdf.itertuples(index=False):
+        # print(row)
         count+=1
         filtered = 0
         good = 0
         print(count,'/',len(cdf))
                 
-        name = row['title']
-        phone = row['phone']
+        name = row[0]
+        phone = row[1]
         # print(len(str(phone)))
         if len(str(phone)) == 10:
             pass
         else:
             filtered+=1
             continue
-        city = row['city']
-        link = row['link']
+        try:
+            city = row[2]
+        except:
+            city = ''
+        try:
+        link = row[3]
+        except:
+            link = ''
         zipcode = get_zip(phone)
+        if zipcode == '#N/A':
+            filtered +=1
+            continue
         pwc = get_pwc(name)
         if pwc == '0':
             filtered+=1
@@ -103,7 +114,10 @@ def main():
     args = parser.parse_args()
 
     input_directory = args.input_path
-    output=args.output_path + '/'
+    if args.output_path:
+        output=args.output_path + '/'
+    else:
+        output=''
     get_info(input_directory,output)
 
 if __name__ == '__main__':

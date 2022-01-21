@@ -76,7 +76,7 @@ def get_info(path_to_directory,output_path):
         phone = phone.replace(')','')
         phone = phone.replace('-','')
         phone = phone.replace(' ','')
-        print(phone)
+        # print(phone)
         if len(str(phone)) == 10:
             pass
         else:

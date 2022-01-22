@@ -2,6 +2,9 @@ import pandas as pd
 import glob2
 from tqdm import tqdm
 import argparse, os, sys
+from openpyxl.utils.dataframe import dataframe_to_rows
+from openpyxl import Workbook
+
 
 def get_zip(phone):
     
@@ -35,6 +38,39 @@ def get_pwc(title):
     
     return(found_pwc)
 
+
+def csv_to_upload_sheet(df,output_path):
+    wb = Workbook()
+    ws = wb.active
+
+    for r in dataframe_to_rows(df, index=False, header=True):
+        ws.append(r)
+    
+    
+    ws.insert_rows(1, amount=4)
+    ws.insert_cols(2, amount=1)
+    ws.insert_cols(5, amount=6)
+    ws['A1'] = 'Prospecting Data'
+    ws['B5'] = 'First'
+    ws['B4'] = 'Contact Name'
+    ws['A4'] = 'Company Name'
+    ws['A5'] = '(Required)'
+    ws['D4'] = 'Business Phone Number'
+    ws['D5'] = '(Required if no Email)'
+    ws['E5'] = 'Business Fax'
+    ws['F5'] = 'Cell Phone'
+    ws['G5'] = 'Website URL'
+    ws['H4'] = 'Email'
+    ws['H5'] = '(Required if no Business Phone)'
+    ws['I5'] = 'Address 1'
+    ws['J5'] = 'Address 2'
+    ws['M4'] = 'PWC'
+    ws['M5'] = '(ID or Description)'
+    ws['N5'] = 'Source'
+    ws['O5'] = 'Comments'
+    
+    wb.save(output_path + "Filtered_upload_sheet.xlsx")
+    
 def get_info(path_to_directory,output_path):
     
     dflist = []
@@ -63,6 +99,7 @@ def get_info(path_to_directory,output_path):
     count = 0
     filtered = 0
     good = 0    
+    ccdf = ''
     for row in cdf.itertuples(index=False):
         # print(row)
         count+=1
@@ -107,9 +144,13 @@ def get_info(path_to_directory,output_path):
         citylist.append(city)
         ziplist.append(zipcode)
         pwclist.append(pwc)
-        cleaned_df = pd.DataFrame({'Company Name':namelist, 'Business Phone':phonelist, 'Source_Link':linklist,'City':citylist,'Zip Code':ziplist,'PWC':pwclist})
+        cleaned_df = pd.DataFrame({'Company Name':namelist,'Last':linklist, 'Business Phone':phonelist, 'City':citylist,'Zip':ziplist,'PWC':pwclist})
         cleaned_df.to_csv(output_path + 'FilteredList.csv', index=False)
+        ccdf = cleaned_df
+    csv_to_upload_sheet(ccdf, output_path)
     print('Cleaning successful!\n',good, 'good links', filtered, 'bad links filtered out')
+    
+
     
 def main():
     parser = argparse.ArgumentParser()

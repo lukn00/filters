@@ -3,3 +3,4 @@ pandas
 glob2
 argparse
 tqdm
+openpyxl

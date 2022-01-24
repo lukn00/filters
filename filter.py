@@ -38,7 +38,6 @@ def get_pwc(title):
     
     return(found_pwc)
 
-
 def csv_to_upload_sheet(df,output_path):
     wb = Workbook()
     ws = wb.active
@@ -76,16 +75,25 @@ def get_info(path_to_directory,output_path):
     dflist = []
 
     path = path_to_directory + '/*.csv'
-
+    # print (path)
     files = glob2.glob(path)
     
     for file in files:
+        # print(file)
         df = pd.read_csv(file)
+        try:
+            df=df.rename(columns={'title':'company_name','address':'city','Link':'link'})
+        except:
+            pass
+        
+        
         dflist.append(df)
-
+    # print(dflist)
     cdf = pd.concat(dflist)
     cdf = cdf.drop_duplicates()
     cdf = cdf.drop_duplicates(subset=['phone'])
+    cdf.to_csv('poop.csv')
+    print(cdf)
     
     print('getting infos :P')
     
@@ -104,7 +112,7 @@ def get_info(path_to_directory,output_path):
         # print(row)
         count+=1
 
-        print(count,'/',len(cdf))
+        
                 
         name = row[0]
         phone = row[1]
@@ -135,7 +143,7 @@ def get_info(path_to_directory,output_path):
         if pwc == '0':
             filtered+=1
             continue
-        
+        print(count,'/',len(cdf), zipcode, pwc)
         good+=1
         # print(name, zipcode, pwc)
         namelist.append(name)
@@ -146,10 +154,9 @@ def get_info(path_to_directory,output_path):
         pwclist.append(pwc)
         cleaned_df = pd.DataFrame({'Company Name':namelist,'Last':linklist, 'Business Phone':phonelist, 'City':citylist,'Zip':ziplist,'PWC':pwclist})
         cleaned_df.to_csv(output_path + 'FilteredList.csv', index=False)
-        ccdf = cleaned_df
+        ccdf = cleaned_df.drop_duplicates()
     csv_to_upload_sheet(ccdf, output_path)
     print('Cleaning successful!\n',good, 'good links', filtered, 'bad links filtered out')
-    
 
     
 def main():

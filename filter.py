@@ -32,7 +32,7 @@ def get_pwc(title):
     for row in pwc_filter.itertuples(index=False):
         term = row[0]
         pwc = row[1]
-        if term in title:
+        if term in str(title):
             found_pwc = pwc
             break
     

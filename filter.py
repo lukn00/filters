@@ -92,8 +92,8 @@ def get_info(path_to_directory,output_path):
     cdf = pd.concat(dflist)
     cdf = cdf.drop_duplicates()
     cdf = cdf.drop_duplicates(subset=['phone'])
-    cdf.to_csv('poop.csv')
-    print(cdf)
+    # cdf.to_csv('poop.csv')
+    # # print(cdf)
     
     print('getting infos :P')
     

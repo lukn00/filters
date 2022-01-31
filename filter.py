@@ -143,7 +143,7 @@ def get_info(path_to_directory,output_path):
         if pwc == '0':
             filtered+=1
             continue
-        print(count,'/',len(cdf), zipcode, pwc)
+        print(count,'/',len(cdf))
         good+=1
         # print(name, zipcode, pwc)
         namelist.append(name)

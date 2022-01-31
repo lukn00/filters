@@ -77,7 +77,7 @@ alias filter='python3 /path/to/filters/filter.py'
 For example mine looks like this:
 
 ```
-alias filter='python3 ~/angi/bots/filters/filter.py'
+alias filter='python3 ~/usr/bots/filters/filter.py'
 ```
 
 once your line is correctly added, save and exit with ctrl+x and then Y

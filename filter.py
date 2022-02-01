@@ -4,7 +4,7 @@ from tqdm import tqdm
 import argparse, os, sys
 from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl import Workbook
-
+import re
 
 def get_zip(phone):
     
@@ -19,7 +19,9 @@ def get_zip(phone):
         zip_code = row[1]
         # print(area_code, zip_code)
         if phone in str(area_code):
-            found_zip = zip_code
+            found_zip = str(zip_code)
+            if found_zip[0]=='0':
+                found_zip = '~'+found_zip
             break
     return(found_zip)
 
@@ -113,8 +115,12 @@ def get_info(path_to_directory,output_path):
         count+=1
 
         
-                
         name = row[0]
+        # print(name)
+        # cleaned_name = [character for character in name if character.isalnum()]
+        cleaned_name = re.sub(r'\W+', ' ', str(name))
+        # cleaned_name = ''.join(cleaned_name)
+        # print(cleaned_name)
         phone = row[1]
         phone = str(phone).strip()
         phone = phone.replace('(','')

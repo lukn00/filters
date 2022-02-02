@@ -117,7 +117,7 @@ def get_info(path_to_directory,output_path):
     filtered = 0
     good = 0    
     ccdf = ''
-    for row in cdf.itertuples(index=False):
+    for row in tqdm(cdf.itertuples(index=False), total=cdf.shape[0]):
         # print(row)
         count+=1
 
@@ -157,7 +157,7 @@ def get_info(path_to_directory,output_path):
         if pwc == '0':
             filtered+=1
             continue
-        print(count,'/',len(cdf))
+        # print(count,'/',len(cdf))
         good+=1
         # print(name, zipcode, pwc)
         namelist.append(name)
@@ -168,9 +168,9 @@ def get_info(path_to_directory,output_path):
         pwclist.append(pwc)
         cleaned_df = pd.DataFrame({'Company Name':namelist,'Last':linklist, 'Business Phone':phonelist, 'City':citylist,'Zip':ziplist,'PWC':pwclist})
         # cleaned_df = cleaned_df.astype(str)
-        cleaned_df.to_csv(output_path + 'FilteredList.csv', index=False)
         ccdf = cleaned_df.drop_duplicates()
-        csv_to_upload_sheet(ccdf, output_path)
+    # cleaned_df.to_csv(output_path + 'FilteredList.csv', index=False)
+    csv_to_upload_sheet(ccdf, output_path)
     print('Cleaning successful!\n',good, 'good links', filtered, 'bad links filtered out')
 
     

@@ -4,6 +4,7 @@ from tqdm import tqdm
 import argparse, os, sys
 from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl import Workbook
+from openpyxl.styles import numbers
 import re
 
 def get_zip(phone):
@@ -20,8 +21,10 @@ def get_zip(phone):
         # print(area_code, zip_code)
         if phone in str(area_code):
             found_zip = str(zip_code)
-            if found_zip[0]=='0':
-                found_zip = '~'+found_zip
+            # print(found_zip)
+            # if '0' in found_zip[0]:
+            #     found_zip = '~'+found_zip
+            #     print(found_zip)
             break
     return(found_zip)
 
@@ -69,6 +72,10 @@ def csv_to_upload_sheet(df,output_path):
     ws['M5'] = '(ID or Description)'
     ws['N5'] = 'Source'
     ws['O5'] = 'Comments'
+    for row in ws[2:ws.max_row]: 
+        cell = row[11]            # column O
+        cell.number_format = numbers.FORMAT_TEXT
+        # print(str(cell)[1])
     
     wb.save(output_path + "Filtered_upload_sheet.xlsx")
     
@@ -119,6 +126,7 @@ def get_info(path_to_directory,output_path):
         # print(name)
         # cleaned_name = [character for character in name if character.isalnum()]
         cleaned_name = re.sub(r'\W+', ' ', str(name))
+        name = cleaned_name
         # cleaned_name = ''.join(cleaned_name)
         # print(cleaned_name)
         phone = row[1]
@@ -159,9 +167,10 @@ def get_info(path_to_directory,output_path):
         ziplist.append(zipcode)
         pwclist.append(pwc)
         cleaned_df = pd.DataFrame({'Company Name':namelist,'Last':linklist, 'Business Phone':phonelist, 'City':citylist,'Zip':ziplist,'PWC':pwclist})
+        # cleaned_df = cleaned_df.astype(str)
         cleaned_df.to_csv(output_path + 'FilteredList.csv', index=False)
         ccdf = cleaned_df.drop_duplicates()
-    csv_to_upload_sheet(ccdf, output_path)
+        csv_to_upload_sheet(ccdf, output_path)
     print('Cleaning successful!\n',good, 'good links', filtered, 'bad links filtered out')
 
     
